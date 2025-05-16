@@ -72,12 +72,17 @@ begin
 		
 	wait until rising_edge(clka);
 		
+		addra	<= "0000";
 		wea	<= '0';
 		dina	<= x"0000";
 	
 	wait until rising_edge(clkb);
 	
 		addrb	<= "0001";
+		
+	wait until rising_edge(clkb);
+	
+		addrb	<= "0000";
 		
 	wait;
 end process;
